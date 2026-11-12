@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Factooooo — Preview Build</title>
-    <meta name="description" content="Download the Factooooo preview build for Windows 11. Industrial monitoring and management, built on Electron." />
+    <title>Factooooo — Planned Maintenance for Windows</title>
+    <meta name="description" content="Download Factooooo: a Windows application for planned maintenance. Assets, intervals, due dates and completion history in one focused screen." />
     <style>
       :root {
         --void: #07090b;
@@ -17,7 +17,6 @@
         --dim: #94a5ae;
         --mute: #5e7078;
         --teal: #2dd4bf;
-        --teal-soft: #99f6e4;
         --amber: #f59e0b;
       }
       * { box-sizing: border-box; }
@@ -32,7 +31,6 @@
         font-size: 15px;
         line-height: 1.55;
         -webkit-font-smoothing: antialiased;
-        min-height: 100vh;
       }
       .wrap { max-width: 940px; margin: 0 auto; padding: 44px 24px 64px; }
       .mono { font-family: 'Cascadia Mono', Consolas, ui-monospace, monospace; font-variant-numeric: tabular-nums; }
@@ -43,18 +41,15 @@
       .sub { font-size: 10.5px; letter-spacing: 0.19em; text-transform: uppercase; color: var(--mute); margin-top: 3px; }
       .chip {
         margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
-        border: 1px solid rgba(245, 158, 11, 0.35); background: rgba(245, 158, 11, 0.09);
-        color: var(--amber); border-radius: 999px; padding: 5px 12px;
+        border: 1px solid rgba(45, 212, 191, 0.3); background: rgba(45, 212, 191, 0.08);
+        color: var(--teal); border-radius: 999px; padding: 5px 12px;
         font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
       }
       .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
-      h1 {
-        font-size: clamp(30px, 5vw, 44px); line-height: 1.1; letter-spacing: -0.025em;
-        margin: 44px 0 0; font-weight: 650;
-      }
+      h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.1; letter-spacing: -0.025em; margin: 44px 0 0; font-weight: 650; }
       h1 span { color: var(--teal); }
-      .lead { color: var(--dim); max-width: 620px; margin: 14px 0 0; font-size: 16px; }
+      .lead { color: var(--dim); max-width: 640px; margin: 14px 0 0; font-size: 16px; }
 
       .panel {
         background: linear-gradient(180deg, rgba(22, 29, 34, 0.92), rgba(17, 22, 26, 0.92));
@@ -62,17 +57,13 @@
       }
 
       .shots { margin-top: 32px; }
-      .shots img {
-        width: 100%; height: auto; display: block; border-radius: 12px;
-        border: 1px solid var(--line-strong);
-        box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.75);
-      }
-      .cap { margin-top: 9px; font-size: 10.5px; color: var(--mute); letter-spacing: 0.04em; }
+      .shots img { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line-strong); box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.75); }
+      .cap { margin-top: 9px; font-size: 10.5px; color: var(--mute); }
 
       .downloads { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; margin-top: 24px; }
-      @media (max-width: 720px) { .downloads { grid-template-columns: 1fr; } }
+      @media (max-width: 720px) { .downloads, .cols { grid-template-columns: 1fr; } }
       .dl { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
-      .dl.primary { border-color: rgba(45, 212, 191, 0.32); box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.06) inset; }
+      .dl.primary { border-color: rgba(45, 212, 191, 0.32); }
       .dl h2 { margin: 0; font-size: 13px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
       .dl p { margin: 0; font-size: 13.5px; color: var(--dim); }
 
@@ -92,7 +83,6 @@
       .hash b { color: var(--dim); font-weight: 500; }
 
       .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
-      @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } }
       .col { padding: 18px 20px; }
       .col h3 { margin: 0 0 10px; font-size: 11px; letter-spacing: 0.13em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
       ul { margin: 0; padding: 0; list-style: none; }
@@ -104,12 +94,10 @@
         margin-top: 14px; padding: 20px; display: flex; gap: 13px; align-items: flex-start;
         border-color: rgba(245, 158, 11, 0.28); background: rgba(245, 158, 11, 0.055);
       }
-      .notice svg { flex: 0 0 auto; margin-top: 2px; }
       .notice p { margin: 0; font-size: 13px; color: #e7c891; }
       .notice b { color: var(--amber); }
 
       footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--mute); display: flex; flex-wrap: wrap; gap: 8px 18px; }
-      code { font-family: 'Cascadia Mono', Consolas, monospace; font-size: 11.5px; color: var(--dim); }
     </style>
   </head>
   <body>
@@ -127,27 +115,27 @@
         </svg>
         <div>
           <div class="brand">FACTOOOOO</div>
-          <div class="sub">Industry 4.0 Suite</div>
+          <div class="sub">Planned Maintenance</div>
         </div>
-        <div class="chip"><span class="dot"></span> Preview · v0.1.1</div>
+        <div class="chip"><span class="dot"></span> Preview · v0.2.0</div>
       </header>
 
-      <h1>Industrial monitoring,<br /><span>built for the shop floor.</span></h1>
+      <h1>Know what's due,<br /><span>before it fails.</span></h1>
       <p class="lead">
-        A native Windows application for plant visibility: machine monitoring, production, maintenance,
-        energy, quality and alarms in one place — with a local database, no cloud account required.
+        A Windows application for planned maintenance. Every asset, interval and due date in one place —
+        with a real database behind it, no cloud account, and no machinery connection required to start.
       </p>
 
       <div class="shots">
-        <img src="screenshot.png" alt="Factooooo Factory Overview screen running on Windows" />
-        <div class="cap mono">Factory Overview — real build, simulated data</div>
+        <img src="screenshot.png" alt="Factooooo planned maintenance schedule running on Windows" />
+        <div class="cap mono">Schedule — real build, simulated plant data</div>
       </div>
 
       <div class="downloads">
         <div class="panel dl primary">
           <h2>Portable — recommended</h2>
-          <p>One file. Double-click to run. Nothing is installed, no admin rights, no shortcuts left behind.</p>
-          <a class="btn primary" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.1.1/Factooooo-Portable-0.1.1-x64.exe">
+          <p>One file. Double-click to run. Nothing installed, no admin rights, no shortcuts left behind.</p>
+          <a class="btn primary" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.2.0/Factooooo-Portable-0.2.0-x64.exe">
             Download for Windows 11 · 104 MB
           </a>
           <div class="meta">
@@ -155,20 +143,20 @@
             <span>No installation</span>
             <span>Data stays beside the .exe</span>
           </div>
-          <div class="hash"><b>SHA-256</b><br />6b4264c1b86dff93ff5e4a0164df8e6fc77c3ba0fb113a9e9ff835d01381bb02</div>
+          <div class="hash"><b>SHA-256</b><br />40c8b3da07dafcc817b1456e851f4630afd73782b49bfa2d54be6e1faa63009f</div>
         </div>
 
         <div class="panel dl">
           <h2>One-click installer</h2>
-          <p>Installs for your user, launches itself, adds a desktop shortcut. Starts faster than the portable build afterwards.</p>
-          <a class="btn secondary" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.1.1/Factooooo-Setup-0.1.1-x64.exe">
+          <p>Installs for your user, launches itself, adds a desktop shortcut. Starts faster afterwards.</p>
+          <a class="btn secondary" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.2.0/Factooooo-Setup-0.2.0-x64.exe">
             Download installer · 115 MB
           </a>
           <div class="meta">
             <span>Per-user install</span>
             <span>No admin rights</span>
           </div>
-          <div class="hash"><b>SHA-256</b><br />b714144a199c25a2e08d2ad0d5a55a456547b9edae5e54acd0a1ee60e51fcd8d</div>
+          <div class="hash"><b>SHA-256</b><br />a8305712f62884b8ebf51f65c94767d67a3f353c9a7c9e67c1a32b01251d2e99</div>
         </div>
       </div>
 
@@ -176,38 +164,38 @@
         <div class="panel col">
           <h3>Working in this build</h3>
           <ul>
-            <li>Native desktop shell — Electron 44, React 19</li>
-            <li>12 module screens with collapsible navigation</li>
-            <li>Local SQLite database, verified write and read</li>
-            <li>Live system check panel showing real runtime values</li>
-            <li>Automated self-test: 9 of 9 checks passing</li>
+            <li>Schedule with overdue, due-this-week and upcoming sections</li>
+            <li>Asset register with criticality and next service date</li>
+            <li>Completion history with on-time vs late outcome</li>
+            <li>Complete a job: writes history, rolls the interval forward</li>
+            <li>KPIs computed from the database — 90-day on-time compliance included</li>
+            <li>Local SQLite database, nothing leaves your PC</li>
           </ul>
         </div>
         <div class="panel col off">
-          <h3>Not built yet</h3>
+          <h3>Deliberately not here yet</h3>
           <ul>
-            <li>Production KPIs and OEE figures</li>
-            <li>SCADA tag monitoring and trends</li>
-            <li>Maintenance, energy, quality, inventory</li>
+            <li>SCADA and live machine monitoring</li>
+            <li>Production orders and OEE</li>
+            <li>Energy, quality, inventory</li>
             <li>Alarms, reports, digital twin, AI assistant</li>
-            <li>Any connection to real machinery</li>
+            <li>Any connection to real machinery — data is simulated</li>
           </ul>
         </div>
       </div>
 
       <div class="panel notice">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
         </svg>
         <p>
-          <b>Windows will warn you.</b> This build is unsigned (no code-signing certificate), so SmartScreen
-          shows "Windows protected your PC". Click <b>More info</b> → <b>Run anyway</b>.
-          The SHA-256 above lets you confirm the file is unmodified.
+          <b>Windows will warn you.</b> This build is unsigned, so SmartScreen shows "Windows protected your PC".
+          Click <b>More info</b> → <b>Run anyway</b>. The SHA-256 above lets you confirm the file is unmodified.
         </p>
       </div>
 
       <footer>
-        <span>Preview build — figures and data are simulated, no machinery is connected.</span>
+        <span>Preview build — plant data is simulated, no machinery is connected.</span>
         <span>Source is private. Binaries distributed here for testing.</span>
       </footer>
     </div>

@@ -17,13 +17,17 @@ Landing page: https://wolfxwxjr.github.io/factooooo-preview/
 
 ## What this build is
 
-A **foundation preview**: the desktop shell, local SQLite database and Windows packaging are real and
-tested. The individual modules (SCADA, production/MES, maintenance, energy, quality, inventory, alarms,
-reports, digital twin, AI assistant) are navigable screens that state plainly they are not implemented —
-they contain no fabricated figures.
+A **planned-maintenance workspace**. Real, working parts: an asset register, maintenance plans with
+intervals, a derived schedule (overdue / due this week / upcoming), completion history, and a
+**Complete** action that writes history and rolls the next due date forward. KPIs such as 90-day
+on-time compliance are computed from those rows.
 
-No machine, OPC UA, MQTT or Siemens S7 connection exists in this build. Everything is labelled
-**SIMULATED DATA**.
+The wider industrial suite (SCADA, production/MES, energy, quality, inventory, alarms, reports,
+digital twin, AI assistant) is still visible in the sidebar but **disabled** — parked until this
+workflow is finished. Those entries do not navigate anywhere and contain no invented figures.
+
+No machine, OPC UA, MQTT or Siemens S7 connection exists in this build. Plant data is simulated and
+labelled **SIMULATED DATA** throughout.
 
 ## Trust
 
