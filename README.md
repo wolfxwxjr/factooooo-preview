@@ -17,10 +17,11 @@ Landing page: https://wolfxwxjr.github.io/factooooo-preview/
 
 ## What this build is
 
-A **planned-maintenance workspace**. Real, working parts: an asset register, maintenance plans with
-intervals, a derived schedule (overdue / due this week / upcoming), completion history, and a
-**Complete** action that writes history and rolls the next due date forward. KPIs such as 90-day
-on-time compliance are computed from those rows.
+A **planned-maintenance workspace**. Real, working parts: an asset register, maintenance plans triggered
+either by **calendar interval** or by **machine usage** (runtime hours / cycle count), a derived
+schedule (overdue / due this week / upcoming), completion history, and a **Complete** action that
+writes history and either rolls the next due date forward or re-baselines the usage counter. KPIs such
+as 90-day on-time compliance are computed from those rows.
 
 The wider industrial suite (SCADA, production/MES, energy, quality, inventory, alarms, reports,
 digital twin, AI assistant) is still visible in the sidebar but **disabled** — parked until this
