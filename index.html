@@ -61,7 +61,15 @@
         border: 1px solid var(--line); border-radius: 12px;
       }
 
-      .downloads { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; margin-top: 34px; }
+      .shots { margin-top: 32px; }
+      .shots img {
+        width: 100%; height: auto; display: block; border-radius: 12px;
+        border: 1px solid var(--line-strong);
+        box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.75);
+      }
+      .cap { margin-top: 9px; font-size: 10.5px; color: var(--mute); letter-spacing: 0.04em; }
+
+      .downloads { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px; margin-top: 24px; }
       @media (max-width: 720px) { .downloads { grid-template-columns: 1fr; } }
       .dl { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
       .dl.primary { border-color: rgba(45, 212, 191, 0.32); box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.06) inset; }
@@ -129,6 +137,11 @@
         A native Windows application for plant visibility: machine monitoring, production, maintenance,
         energy, quality and alarms in one place — with a local database, no cloud account required.
       </p>
+
+      <div class="shots">
+        <img src="screenshot.png" alt="Factooooo Factory Overview screen running on Windows" />
+        <div class="cap mono">Factory Overview — real build, simulated data</div>
+      </div>
 
       <div class="downloads">
         <div class="panel dl primary">
