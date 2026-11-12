@@ -6,7 +6,7 @@ repository and is not published here.
 
 ## Download
 
-Latest build: **[v0.1.1](https://github.com/wolfxwxjr/factooooo-preview/releases/latest)**
+Latest build: **[see the latest release](https://github.com/wolfxwxjr/factooooo-preview/releases/latest)** (the link always resolves to the newest build)
 
 | File | Use it if |
 | --- | --- |
