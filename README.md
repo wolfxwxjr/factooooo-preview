@@ -6,14 +6,14 @@ repository and is not published here.
 
 ## Download
 
-Latest build: **[see the latest release](https://github.com/wolfxwxjr/factooooo-preview/releases/latest)** (the link always resolves to the newest build)
+Latest build: **[see the latest release](https://github.com/nk12Kumar/factooooo-preview/releases/latest)** (the link always resolves to the newest build)
 
 | File | Use it if |
 | --- | --- |
 | `Factooooo-Portable-<version>-x64.exe` | You want to run it immediately. Single file, nothing installed, data kept in a `Factooooo-Data` folder beside the executable. |
 | `Factooooo-Setup-<version>-x64.exe` | You want it installed with a desktop shortcut and faster subsequent launches. Per-user, no admin rights. |
 
-Landing page: https://wolfxwxjr.github.io/factooooo-preview/
+Landing page: https://nk12kumar.github.io/factooooo-preview/
 
 ## What this build is
 
