@@ -100,7 +100,7 @@
       footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--mute); display: flex; flex-wrap: wrap; gap: 8px 18px; }
     </style>
   </head>
-  <body data-version="v0.4.0">
+  <body data-version="v0.7.0">
     <div class="wrap">
       <header>
         <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
@@ -117,7 +117,7 @@
           <div class="brand">FACTOOOOO</div>
           <div class="sub">Planned Maintenance</div>
         </div>
-        <div class="chip"><span class="dot"></span> <span id="version-chip">Preview · v0.4.0</span></div>
+        <div class="chip"><span class="dot"></span> <span id="version-chip">Preview · v0.7.0</span></div>
       </header>
 
       <h1>Know what's due,<br /><span>before it fails.</span></h1>
@@ -135,7 +135,7 @@
         <div class="panel dl primary">
           <h2>Portable — recommended</h2>
           <p>One file. Double-click to run. Nothing installed, no admin rights, no shortcuts left behind.</p>
-          <a class="btn primary" id="dl-portable" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.4.0/Factooooo-Portable-0.4.0-x64.exe">
+          <a class="btn primary" id="dl-portable" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.7.0/Factooooo-Portable-0.7.0-x64.exe">
             Download for Windows 11 · <span id="size-portable">104 MB</span>
           </a>
           <div class="meta">
@@ -143,20 +143,20 @@
             <span>No installation</span>
             <span>Data stays beside the .exe</span>
           </div>
-          <div class="hash" id="hash-portable"><b>SHA-256</b><br />0fa17cdb0c926def1c54549922cb5d4b9071372a64f4c5e0b7dd1c9eb38e9165</div>
+          <div class="hash" id="hash-portable"><b>SHA-256</b><br />e96cba1d7c7122a1fd4bd76be27628b58e150c509b9a4d47d5c9492510667750</div>
         </div>
 
         <div class="panel dl">
           <h2>One-click installer</h2>
           <p>Installs for your user, launches itself, adds a desktop shortcut. Starts faster afterwards.</p>
-          <a class="btn secondary" id="dl-setup" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.4.0/Factooooo-Setup-0.4.0-x64.exe">
+          <a class="btn secondary" id="dl-setup" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.7.0/Factooooo-Setup-0.7.0-x64.exe">
             Download installer · <span id="size-setup">115 MB</span>
           </a>
           <div class="meta">
             <span>Per-user install</span>
             <span>No admin rights</span>
           </div>
-          <div class="hash" id="hash-setup"><b>SHA-256</b><br />0869d59b7095f45f775032006465a9f40ac08f4865c265e2799610e431977926</div>
+          <div class="hash" id="hash-setup"><b>SHA-256</b><br />d4388a378b7afd8844b99bbb425b324ae2ab8f55e2872f63a71a5fe30a5ca84a</div>
         </div>
       </div>
 
@@ -170,6 +170,8 @@
             <li>Completion history with on-time vs late outcome</li>
             <li>Complete a job: writes history, rolls the interval or re-baselines the meter</li>
             <li>Guide assistant (Ctrl+K): ask a question, get cited procedures</li>
+            <li>Records questions: "which jobs are overdue", "history for CNC-01 last month"</li>
+            <li>Rotating log and error recovery instead of a blank window</li>
             <li>Local SQLite database, nothing leaves your PC</li>
           </ul>
         </div>
