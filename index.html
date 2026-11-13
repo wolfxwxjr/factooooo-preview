@@ -100,7 +100,7 @@
       footer { margin-top: 34px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--mute); display: flex; flex-wrap: wrap; gap: 8px 18px; }
     </style>
   </head>
-  <body data-version="v0.9.1">
+  <body data-version="v0.11.0">
     <div class="wrap">
       <header>
         <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
@@ -115,48 +115,64 @@
         </svg>
         <div>
           <div class="brand">FACTOOOOO</div>
-          <div class="sub">Planned Maintenance</div>
+          <div class="sub">Maintenance Management</div>
         </div>
-        <div class="chip"><span class="dot"></span> <span id="version-chip">Preview · v0.9.1</span></div>
+        <div class="chip"><span class="dot"></span> <span id="version-chip">Preview · v0.11.0</span></div>
       </header>
 
-      <h1>Know what's due,<br /><span>before it fails.</span></h1>
+      <h1>Every job, every machine,<br /><span>on one screen.</span></h1>
       <p class="lead">
-        A Windows application for planned maintenance. Every asset, interval and due date in one place —
-        with a real database behind it, no cloud account, and no machinery connection required to start.
+        A Windows application for planning and tracking factory maintenance: assigned tasks with planned
+        and actual dates, a month calendar, and monthly reports as PDF or Excel. It runs on your own
+        computer, needs no internet, and asks for no account.
       </p>
 
       <div class="shots">
-        <img src="screenshot.png" alt="Factooooo planned maintenance schedule running on Windows" />
-        <div class="cap mono">Schedule — real build, simulated plant data</div>
+        <img src="screenshot.png" alt="Factooooo dashboard running on Windows" />
+        <div class="cap mono">Dashboard — real build, sample plant data</div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px">
+        <figure style="margin:0">
+          <img src="screenshot-tasks.png" alt="Tasks screen with planned and actual dates" style="width:100%;border-radius:10px;border:1px solid var(--line)" />
+          <figcaption class="cap mono" style="margin-top:6px">Tasks — planned vs actual, progress</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="screenshot-calendar.png" alt="Month calendar of maintenance work" style="width:100%;border-radius:10px;border:1px solid var(--line)" />
+          <figcaption class="cap mono" style="margin-top:6px">Calendar — the month at a glance</figcaption>
+        </figure>
+        <figure style="margin:0">
+          <img src="screenshot-reports.png" alt="Monthly maintenance report" style="width:100%;border-radius:10px;border:1px solid var(--line)" />
+          <figcaption class="cap mono" style="margin-top:6px">Reports — PDF and Excel out</figcaption>
+        </figure>
       </div>
 
       <div class="downloads">
         <div class="panel dl primary">
           <h2>Portable — recommended</h2>
           <p>One file. Double-click to run. Nothing installed, no admin rights, no shortcuts left behind.</p>
-          <a class="btn primary" id="dl-portable" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.9.1/Factooooo-Portable-0.9.1-x64.exe">
-            Download for Windows 11 · <span id="size-portable">98 MB</span>
+          <a class="btn primary" id="dl-portable" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.11.0/Factooooo-Portable-0.11.0-x64.exe">
+            Download for Windows 11 · <span id="size-portable">99 MB</span>
           </a>
           <div class="meta">
             <span>Windows 10 / 11 · 64-bit</span>
             <span>No installation</span>
             <span>Data stays beside the .exe</span>
           </div>
-          <div class="hash" id="hash-portable"><b>SHA-256</b><br />d531c57dbcf38d3ce929009a1f281f8cc8582f1e250a86f1b66a75478df3fa62</div>
+          <div class="hash" id="hash-portable"><b>SHA-256</b><br />3257ac433b7b88d39cbddda3e8805bc664259e7d55d2ec6f0b6e5b715f592e74</div>
         </div>
 
         <div class="panel dl">
           <h2>One-click installer</h2>
           <p>Installs for your user, launches itself, adds a desktop shortcut. Starts faster afterwards.</p>
-          <a class="btn secondary" id="dl-setup" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.9.1/Factooooo-Setup-0.9.1-x64.exe">
-            Download installer · <span id="size-setup">108 MB</span>
+          <a class="btn secondary" id="dl-setup" href="https://github.com/wolfxwxjr/factooooo-preview/releases/download/v0.11.0/Factooooo-Setup-0.11.0-x64.exe">
+            Download installer · <span id="size-setup">109 MB</span>
           </a>
           <div class="meta">
             <span>Per-user install</span>
             <span>No admin rights</span>
           </div>
-          <div class="hash" id="hash-setup"><b>SHA-256</b><br />85dd7c24935662954683a70d011886c73522625294fb6338718dc529043beab1</div>
+          <div class="hash" id="hash-setup"><b>SHA-256</b><br />c6116bc03c007424d5717e42b0187da358a62655d0121c1e27dc8eb71490f0f6</div>
         </div>
       </div>
 
@@ -164,30 +180,26 @@
         <div class="panel col">
           <h3>Working in this build</h3>
           <ul>
-            <li>Schedule with overdue, due-this-week and upcoming sections</li>
-            <li>Plans triggered by calendar <em>or</em> machine usage — hours and cycles</li>
-            <li>Asset register with criticality and next service date</li>
-            <li>Completion history with on-time vs late outcome</li>
-            <li>Complete a job: writes history, rolls the interval or re-baselines the meter</li>
-            <li>A <b>Today</b> worklist: Done, Defer with a reason, or Skip — each recorded</li>
-            <li>Type a machine tag (CNC-02) and jump straight to it</li>
-            <li>Ask "why was this deferred?" — answered from the audit trail</li>
-            <li>Rankings: top machines by overdue hours, who completes the most, chronically late tasks</li>
-            <li>Every KPI can open the query behind its own number</li>
-            <li>Guide assistant (Ctrl+K): ask a question, get cited procedures</li>
-            <li>Records questions: "which jobs are overdue", "history for CNC-01 last month"</li>
-            <li>Lighter and faster: no router, 8 locale packs, measured boot</li>
+            <li><b>Dashboard</b> — total, completed, in progress, pending, overdue, completion %</li>
+            <li><b>Tasks</b> — create, edit, delete; planned and actual dates, priority, progress, remarks</li>
+            <li><b>Calendar</b> — month view, colour-coded, click a day to see its jobs</li>
+            <li><b>Reports</b> — monthly progress, planned vs actual, machine-wise status</li>
+            <li>Export to <b>Excel</b> (three tabs) and <b>PDF</b></li>
+            <li><b>Settings</b> — your machines, technicians, supervisors and categories</li>
+            <li>Two roles: supervisor sees everything, technician sees their own work</li>
+            <li>Delay reasons, overdue worked out automatically, progress percentages</li>
+            <li>Backup and restore to any folder you choose</li>
             <li>Local SQLite database, nothing leaves your PC</li>
           </ul>
         </div>
         <div class="panel col off">
           <h3>Deliberately not here yet</h3>
           <ul>
-            <li>SCADA and live machine monitoring</li>
-            <li>Production orders and OEE</li>
-            <li>Energy, quality, inventory</li>
-            <li>Alarms, reports, digital twin</li>
-            <li>Cloud model integration — the guide search runs locally</li>
+            <li>A mobile or tablet app</li>
+            <li>Live machine connections (SCADA, OPC UA, PLCs)</li>
+            <li>Cloud sync or any online account</li>
+            <li>Code signing — Windows will warn on first run</li>
+            <li>Languages other than English</li>
             <li>Any connection to real machinery — data is simulated</li>
           </ul>
         </div>
